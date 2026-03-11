@@ -54,5 +54,54 @@ public class OperacionesMatematicasTest
         Assert.Equal(0, resultado);
     }
 
+    [Fact]
+
+    public void Restar_DosPositivos_RetornaResta()
+    {
+        // Arrange
+        var operacionesMatematicas = new OperacionesMatematicas();
+
+        int a = 10;
+        int b = 5;
+
+        // Act
+        var resultado = operacionesMatematicas.Restar(a, b);
+
+        // Assert
+        Assert.Equal(5, resultado);
+    }
+
+    public void Restar_DosNegativos_RetornaValorCorrecto()
+    {
+        // Arrange
+        var operacionesMatematicas = new OperacionesMatematicas();
+
+        int a = -10;
+        int b = -20;
+
+        // Act
+        var resultado = operacionesMatematicas.Restar(a, b);
+
+        // Assert
+        Assert.Equal(-10, resultado);
+    }
+
+
+    [Fact]
+
+    public void Restar_NegativoPositivo_RetornaValorCorrecto()
+    {
+        // Arrange
+        var operacionesMatematicas = new OperacionesMatematicas();
+
+        int a = -3;
+        int b = 5;
+
+        // Act
+        var resultado = operacionesMatematicas.Restar(a, b);
+
+        // Assert
+        Assert.Equal(-8, resultado);
+    }
 
 }
